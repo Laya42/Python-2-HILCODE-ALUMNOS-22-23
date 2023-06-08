@@ -12,11 +12,21 @@ crear_caja(MAX_HORIZONTAL = 40, MAX_VERTICAL = 5, texto = "¡Hola, Bienvenido al
 print(horca.visual[vidas])
 crear_caja(MAX_HORIZONTAL = 40, MAX_VERTICAL = 5, texto = guiones)
 
-while True:
+while vidas != 0 and guiones != palabra:
     letras, letra = inputs.input_letras(letras)
     guiones, vidas = checks.checks(palabra, guiones, letra, vidas)
-    crear_caja(MAX_HORIZONTAL = 40, MAX_VERTICAL = 5, texto = letras)
+
+    if guiones == palabra:
+        texto = "¡Enhorabuenas! La palabra era " + palabra
+    elif vidas == 0:
+        texto = "GAME OVER"
+    else:
+        texto = letras
+
+    crear_caja(MAX_HORIZONTAL = 40, MAX_VERTICAL = 5, texto = texto)
     print(horca.visual[vidas])
     crear_caja(MAX_HORIZONTAL = 40, MAX_VERTICAL = 5, texto = guiones)
 
+    if vidas == 0:
+        print("La palabra era",palabra)
 
