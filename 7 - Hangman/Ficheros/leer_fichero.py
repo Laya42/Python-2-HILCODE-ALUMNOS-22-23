@@ -10,3 +10,15 @@ with open(nombre_fichero,'r') as f:
 
 f.close()
 print(numeros)
+
+
+
+    numeros = []
+    with open(nombre_fichero, 'r') as archivo:
+        archivo.read()
+        print(archivo)
+        numeros.append(archivo)
+    f.close()
+
+
+
