@@ -1,5 +1,3 @@
-# Escribe tu código aquí :-)
-
 def getColor(color):
     colores = {"BLANCO": (255, 255, 255),
                 "AMARILLO": (255, 255, 0),

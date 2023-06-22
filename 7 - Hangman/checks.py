@@ -1,6 +1,3 @@
-import palabras
-import inputs
-
 def checks(palabra, guiones, letra, vidas):
     copia_guiones = guiones
     dict_especiales = {"A":"Á", "E":"É", "I":"Í", "O":"Ó", "U":"Ú", "N":"Ñ"}
